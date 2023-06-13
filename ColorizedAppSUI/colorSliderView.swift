@@ -17,7 +17,9 @@ struct ColorSliderView: View {
         HStack {
             Text("\(lround(colorValue))")
                 .frame(width: 40, alignment: .leading)
+            
             Spacer()
+            
             Slider(value: $colorValue, in: 0...255, step: 1)
                 .frame(width: 240)
                 .tint(color)
@@ -25,7 +27,9 @@ struct ColorSliderView: View {
                     updateText(newValue)
                 }
                 .animation(.easeInOut(duration: 0.8), value: colorValue)
+            
             Spacer()
+            
             ColorTextFieldView(text: $text, value: $colorValue, color: color)
         }
         .onAppear {
@@ -37,3 +41,4 @@ struct ColorSliderView: View {
         text = "\(lround(value))"
     }
 }
+

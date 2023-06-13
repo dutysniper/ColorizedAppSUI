@@ -72,5 +72,7 @@ struct RectangleView: View {
                 blue: blueValue / 255
                 )
             )
+            .tint(.black)
+            .shadow(color: .white, radius: 5)
     }
 }
