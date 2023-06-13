@@ -11,6 +11,8 @@
 		918D447D2A3737D80075067B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D447C2A3737D80075067B /* ContentView.swift */; };
 		918D447F2A3737DA0075067B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D447E2A3737DA0075067B /* Assets.xcassets */; };
 		918D44822A3737DA0075067B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918D44812A3737DA0075067B /* Preview Assets.xcassets */; };
+		918D44892A3790790075067B /* colorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D44882A3790790075067B /* colorSliderView.swift */; };
+		918D448B2A37917A0075067B /* ColorTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D448A2A37917A0075067B /* ColorTextfieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		918D447C2A3737D80075067B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		918D447E2A3737DA0075067B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918D44812A3737DA0075067B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		918D44882A3790790075067B /* colorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorSliderView.swift; sourceTree = "<group>"; };
+		918D448A2A37917A0075067B /* ColorTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextfieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				918D447A2A3737D80075067B /* ColorizedAppSUIApp.swift */,
 				918D447C2A3737D80075067B /* ContentView.swift */,
+				918D448A2A37917A0075067B /* ColorTextfieldView.swift */,
+				918D44882A3790790075067B /* colorSliderView.swift */,
 				918D447E2A3737DA0075067B /* Assets.xcassets */,
 				918D44802A3737DA0075067B /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				918D447D2A3737D80075067B /* ContentView.swift in Sources */,
+				918D44892A3790790075067B /* colorSliderView.swift in Sources */,
+				918D448B2A37917A0075067B /* ColorTextfieldView.swift in Sources */,
 				918D447B2A3737D80075067B /* ColorizedAppSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,19 +8,69 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var redValue = Double.random(in: 0...255)
+    @State var greenValue = Double.random(in: 0...255)
+    @State var blueValue = Double.random(in: 0...255)
+    
+    @FocusState private var isActive: Bool
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color(.gray).ignoresSafeArea()
+                .onTapGesture {
+                    isActive = false
+                }
+            VStack {
+                RectangleView(
+                    redValue: redValue,
+                    greenValue: greenValue,
+                    blueValue: blueValue
+                )
+                VStack {
+                    ColorSliderView(colorValue: $redValue, color: .red)
+                    ColorSliderView(colorValue: $blueValue, color: .blue)
+                    ColorSliderView(colorValue: $greenValue, color: .green)
+                }
+                .frame(height: 200)
+                .focused($isActive)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") {
+                            isActive = false
+                        }
+                    }
+                }
+                Spacer()
+            }
+            .frame(width: 350)
+            .padding()
         }
-        .padding()
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct RectangleView: View {
+    let redValue: Double
+    let greenValue: Double
+    let blueValue: Double
+    
+    var body: some View {
+        Rectangle()
+            .frame(width: 350, height: 200)
+            .cornerRadius(20)
+            .foregroundColor(
+                Color(
+                red: redValue / 255,
+                green: greenValue / 255,
+                blue: blueValue / 255
+                )
+            )
     }
 }
